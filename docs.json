@@ -18,16 +18,7 @@
         ]
       }
     ],
-    "products": [
-      {
-        "product": "Quickstart",
-        "languages": [
-          {
-            "language": "cn"
-          }
-        ]
-      }
-    ]
+    "groups": []
   },
   "logo": {
     "light": "/logo/light.svg",
