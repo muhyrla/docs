@@ -1,0 +1,70 @@
+---
+title: "Overview"
+description: "What Relayn is and how it helps Discord communities scale support"
+---
+
+Relayn is a SaaS product that plugs an AI-powered support bot into Discord servers. The bot reads your documentation, learns from your moderators' real answers, and handles repetitive community questions 24/7 — so your team can focus on what matters.
+
+Communities grow faster than support teams. Relayn closes that gap without hiring.
+
+## How it works
+
+<Steps>
+  <Step title="Connect">
+    Add Relayn to your Discord server via OAuth. Takes under 5 minutes.
+  </Step>
+  <Step title="Enrich">
+    Upload your docs (`.md`, `.txt`) or index a GitBook site. Relayn chunks, embeds, and stores everything in a vector database.
+  </Step>
+  <Step title="Go live">
+    The bot starts answering questions immediately. It learns from every moderator response to get smarter over time.
+  </Step>
+</Steps>
+
+## Core capabilities
+
+<CardGroup cols={2}>
+  <Card title="RAG-powered Q&A" icon="magnifying-glass">
+    Retrieval-augmented generation answers questions strictly from your indexed documentation — no hallucinated answers.
+  </Card>
+  <Card title="Mod-learning" icon="graduation-cap">
+    When the bot can't answer, it flags the question. Once a trusted moderator replies, Relayn learns and indexes that answer for next time.
+  </Card>
+  <Card title="Unanswered question portal" icon="inbox">
+    A dashboard view of every question the bot couldn't answer, with one-click answer submission.
+  </Card>
+  <Card title="Analytics" icon="chart-line">
+    Accuracy tracking, daily question volume, frequent questions, and a top-moderator leaderboard.
+  </Card>
+  <Card title="Multi-workspace" icon="server">
+    Manage multiple Discord servers from one account, each with its own isolated knowledge base.
+  </Card>
+</CardGroup>
+
+## Architecture at a glance
+
+Relayn is a full-stack application made up of:
+
+- **Backend** — A Django REST API and a Discord bot worker. Handles authentication, workspace and knowledge management, billing, analytics, and the RAG pipeline (document ingestion, embeddings, vector search, and LLM responses via OpenRouter and ChromaDB).
+- **Dashboard** — A React (Vite) single-page app where teams manage their workspace: knowledge sources, bot settings, interactions, and team members.
+- **Landing and blog** — A Next.js marketing site backed by Sanity CMS.
+
+Under the hood, Relayn relies on PostgreSQL for application data, Redis and Celery for background jobs (like indexing documents and aggregating mod-learned answers), and ChromaDB for vector storage.
+
+## Plans
+
+Relayn is available on three plans:
+
+| Plan | Answers / month | Knowledge sources | Mod-learning | Team seats |
+| --- | --- | --- | --- | --- |
+| Free | 150 | 1 | — | — |
+| Pro | 5,000 | 10 | Included | — |
+| Team | Unlimited | Unlimited | Included | Unlimited |
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Connect Relayn to your Discord server and index your first knowledge source.
+  </Card>
+</CardGroup>

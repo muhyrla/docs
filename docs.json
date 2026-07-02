@@ -11,6 +11,12 @@
   "navigation": {
     "pages": [
       {
+        "group": "About",
+        "pages": [
+          "about/overview"
+        ]
+      },
+      {
         "group": "Getting Started",
         "pages": [
           "index",
