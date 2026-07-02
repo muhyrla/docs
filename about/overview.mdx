@@ -27,39 +27,27 @@ Communities grow faster than support teams. Relayn closes that gap without hirin
   <Card title="RAG-powered Q&A" icon="magnifying-glass">
     Retrieval-augmented generation answers questions strictly from your indexed documentation — no hallucinated answers.
   </Card>
+
   <Card title="Mod-learning" icon="graduation-cap">
     When the bot can't answer, it flags the question. Once a trusted moderator replies, Relayn learns and indexes that answer for next time.
   </Card>
+
   <Card title="Unanswered question portal" icon="inbox">
     A dashboard view of every question the bot couldn't answer, with one-click answer submission.
   </Card>
+
   <Card title="Analytics" icon="chart-line">
     Accuracy tracking, daily question volume, frequent questions, and a top-moderator leaderboard.
   </Card>
+
   <Card title="Multi-workspace" icon="server">
     Manage multiple Discord servers from one account, each with its own isolated knowledge base.
   </Card>
 </CardGroup>
 
-## Architecture at a glance
-
-Relayn is a full-stack application made up of:
-
-- **Backend** — A Django REST API and a Discord bot worker. Handles authentication, workspace and knowledge management, billing, analytics, and the RAG pipeline (document ingestion, embeddings, vector search, and LLM responses via OpenRouter and ChromaDB).
-- **Dashboard** — A React (Vite) single-page app where teams manage their workspace: knowledge sources, bot settings, interactions, and team members.
-- **Landing and blog** — A Next.js marketing site backed by Sanity CMS.
-
-Under the hood, Relayn relies on PostgreSQL for application data, Redis and Celery for background jobs (like indexing documents and aggregating mod-learned answers), and ChromaDB for vector storage.
-
 ## Plans
 
-Relayn is available on three plans:
-
-| Plan | Answers / month | Knowledge sources | Mod-learning | Team seats |
-| --- | --- | --- | --- | --- |
-| Free | 150 | 1 | — | — |
-| Pro | 5,000 | 10 | Included | — |
-| Team | Unlimited | Unlimited | Included | Unlimited |
+**Currently, Relayn is free and has almost unlimited** for its _employers_. If you run out of credits in the workspace, simply contact us and we will replenish your balance.
 
 ## Next steps
 

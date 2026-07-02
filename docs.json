@@ -24,7 +24,14 @@
         ]
       }
     ],
-    "groups": []
+    "groups": [
+      {
+        "group": "About",
+        "pages": [
+          "about/overview"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
