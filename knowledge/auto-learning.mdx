@@ -1,0 +1,38 @@
+---
+title: "Auto-learning"
+description: "The bot learns from your moderators' real answers"
+icon: "graduation-cap"
+---
+
+Your best knowledge often isn't written down anywhere — it's in your moderators' heads. Auto-learning captures it without asking anyone to fill in forms.
+
+## How it works
+
+<Steps>
+  <Step title="The bot can't answer">
+    A member asks something your knowledge base doesn't cover. Instead of guessing, the bot stays quiet and marks the question as **waiting for an answer**.
+  </Step>
+  <Step title="A trusted member replies">
+    Someone with a [trusted role](/bot/settings#trusted-roles-and-users) answers the question in Discord — either as a direct reply or just by answering in the channel shortly after. Multi-message answers are stitched together automatically.
+  </Step>
+  <Step title="Relayn learns the pair">
+    The question and answer are saved as a learned Q&A pair (**3 credits**) and indexed into the knowledge base. Next time someone asks the same thing, the bot answers it itself.
+  </Step>
+</Steps>
+
+Learned answers come from your own experts, so the bot treats them as high-authority sources — a moderator's answer outranks a loosely related documentation paragraph.
+
+## The Auto-learning page
+
+The **Auto-learning** page in the dashboard shows every captured question:
+
+- **Waiting for answer** — questions the bot couldn't handle, with links to the original Discord messages. This is your live list of knowledge gaps.
+- **Learned pairs** — question, answer, who answered, and links to both messages in Discord.
+
+If several members ask the same thing, the duplicates are merged into one entry so the list stays clean.
+
+You can also answer a waiting question right from the dashboard — the answer is indexed the same way as one given in Discord.
+
+## Who can teach the bot
+
+Only members you've marked as trusted — via **trusted roles** or individually as **trusted users** in [Bot settings](/bot/settings). Answers from everyone else are ignored, so a random member can't feed the bot wrong information.

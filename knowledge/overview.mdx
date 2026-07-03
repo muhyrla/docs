@@ -1,0 +1,50 @@
+---
+title: "Knowledge base overview"
+sidebarTitle: "Overview"
+description: "Everything the bot knows lives here"
+icon: "book-open"
+---
+
+The knowledge base is the bot's single source of truth. It never answers from general internet knowledge — only from the sources you've added to the workspace. Better knowledge means better answers.
+
+## Source types
+
+| Source | What it is | Cost |
+|---|---|---|
+| **File** | An uploaded `.md` or `.txt` document | 2 credits |
+| **Web page** | A single URL, indexed once | 2 credits |
+| **Documentation site** | A whole docs site (GitBook and similar), crawled page by page | 15 credits per site |
+| **Learned Q&A** | Question–answer pairs the bot picked up from your trusted members in Discord | 3 credits per pair |
+
+Ingestion is charged **per source**, not per page — a 200-page documentation site still costs 15 credits. See [Credits](/billing/credits).
+
+## Processing statuses
+
+Every source moves through these statuses after you add it:
+
+- **Pending** — queued for processing.
+- **Processing** — being read and indexed.
+- **Ready** — the bot can answer from it.
+- **Error** — something went wrong; the error message is shown on the source. Fix the cause (e.g. an unreachable URL) and re-add or reindex it.
+
+## Limits
+
+How many knowledge sources a workspace can hold depends on the plan:
+
+| Plan | Knowledge sources |
+|---|---|
+| Free | 5 |
+| Pro | 20 |
+| Team | Unlimited |
+
+Only sources you add yourself count toward the limit — files, web pages, and documentation sites. Learned Q&A pairs from [auto-learning](/knowledge/auto-learning) are unlimited on every plan.
+
+## Organizing knowledge
+
+- **Tags** — label sources to keep a large knowledge base navigable.
+- **Delete** — removing a source immediately removes it from the bot's answers.
+- For crawled documentation sites, the dashboard shows the tree of indexed pages so you can see exactly what the bot has read.
+
+<Tip>
+Write knowledge the way you'd answer a member: short, factual, one topic per document. Marketing copy and long unstructured pages produce weaker answers than a clean FAQ.
+</Tip>

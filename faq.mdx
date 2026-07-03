@@ -1,0 +1,54 @@
+---
+title: "FAQ & troubleshooting"
+sidebarTitle: "FAQ"
+description: "Quick answers to the most common issues"
+icon: "circle-question"
+---
+
+<AccordionGroup>
+
+<Accordion title="The bot isn't answering — what do I check?">
+In order of likelihood:
+
+1. **Is the bot enabled?** Check the master switch in [Bot settings](/bot/settings).
+2. **Is the channel selected?** The bot only answers in channels you've picked in Bot settings.
+3. **Do you have credits?** At zero balance the bot pauses — see the [Billing](/billing/credits) page.
+4. **Is your knowledge Ready?** Sources still in Pending/Processing/Error aren't used in answers.
+5. **Does your knowledge actually cover the question?** If not, the bot deliberately stays silent instead of guessing — see [How the bot answers](/bot/how-answers-work).
+</Accordion>
+
+<Accordion title="A knowledge source is stuck in Error. What now?">
+Open the source — the error message says what went wrong. Common causes: an unreachable or login-protected URL, or an unsupported file format. Fix the cause and re-add or reindex the source. Failed ingestion doesn't leave broken knowledge behind.
+</Accordion>
+
+<Accordion title="What file types can I upload?">
+Only `.md` (Markdown) and `.txt`. Export other formats to plain text first. See [Uploading files](/knowledge/files).
+</Accordion>
+
+<Accordion title="Can the bot make things up?">
+No. It answers strictly from your knowledge base and links its sources in every reply. If it has nothing relevant, it stays silent and routes the question to your trusted members via [auto-learning](/knowledge/auto-learning).
+</Accordion>
+
+<Accordion title="Do members need to mention the bot to get an answer?">
+No — the bot detects questions in monitored channels automatically. Members just ask naturally.
+</Accordion>
+
+<Accordion title="How do I get more credits?">
+Credits refill each billing cycle from your plan's allowance. To get more: claim the one-time [Pro trial](/billing/promo-codes), redeem a promo code, or move to a higher plan.
+</Accordion>
+
+<Accordion title="Can I connect several Discord servers?">
+Yes. Each server becomes its own workspace with an isolated knowledge base, team, plan, and credit balance. Switch between them in the dashboard sidebar.
+</Accordion>
+
+<Accordion title="Who can teach the bot new answers?">
+Only members you've marked as trusted (by role or individually) in [Bot settings](/bot/settings). Answers from anyone else are never learned.
+</Accordion>
+
+<Accordion title="I removed a knowledge source — will the bot still use it?">
+No. Deleted sources drop out of answers immediately.
+</Accordion>
+
+</AccordionGroup>
+
+Still stuck? Reach us from the [dashboard](https://app.relayn.io) — we read everything.

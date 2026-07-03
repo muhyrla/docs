@@ -1,0 +1,29 @@
+---
+title: "Bot settings"
+sidebarTitle: "Settings"
+description: "Control where the bot works and who can teach it"
+icon: "sliders"
+---
+
+Open **Bot settings** in the dashboard to configure how Relayn behaves on your server.
+
+## Enabling and disabling the bot
+
+The master switch turns the bot on or off for the whole server. When off, the bot ignores every message — useful during events, migrations, or while you rework the knowledge base.
+
+## Channels to watch
+
+The bot only answers in channels you explicitly select. Pick the places where members actually ask for help — `#support`, `#questions`, `#general` — and leave the rest unmonitored.
+
+<Note>
+Fewer, well-chosen channels usually work better than selecting everything: the bot stays useful where it's expected and doesn't interject in off-topic chatter.
+</Note>
+
+## Trusted roles and users
+
+Trusted members are the ones who can teach the bot through [auto-learning](/knowledge/auto-learning):
+
+- **Trusted roles** — pick Discord roles (e.g. Moderator, Team). Anyone holding the role is trusted.
+- **Trusted users** — additionally trust specific members regardless of their roles.
+
+When the bot can't answer a question, only replies from trusted members are captured as new knowledge. Choose people whose answers you'd be happy to see the bot repeat verbatim.

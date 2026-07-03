@@ -1,0 +1,34 @@
+---
+title: "How the bot answers"
+sidebarTitle: "How it works"
+description: "What happens between a member's question and the bot's reply"
+icon: "message-bot"
+---
+
+## Question detection
+
+The bot watches only the channels you selected in [Bot settings](/bot/settings). In those channels it detects questions automatically — members don't need to mention or ping it, they just ask naturally.
+
+A few things it handles for you:
+
+- **Split messages** — if someone spreads a question across several quick messages, the bot waits for the burst to finish and treats it as one question.
+- **Follow-ups** — replies like "and how do I do that on mobile?" are understood in the context of the message they respond to.
+- **Not-questions** — chatter, reactions, and media-only messages are ignored.
+
+## Answering
+
+When the bot sees a question, it searches your [knowledge base](/knowledge/overview) for the most relevant material and composes an answer strictly from it. The reply includes links to the sources used, so members can read more and you can verify where an answer came from.
+
+Each delivered answer costs **1 credit**.
+
+## When the bot stays silent
+
+If the knowledge base has nothing relevant, the bot doesn't guess — it says nothing and records the question as **waiting for an answer**. From there, [auto-learning](/knowledge/auto-learning) takes over: a trusted member's reply becomes new knowledge.
+
+This is deliberate. A support bot that invents answers is worse than no bot.
+
+## Improving answer quality
+
+- Fill the gaps: the [Analytics](/workspace/analytics) page shows questions the bot couldn't answer — turn them into knowledge.
+- Keep sources short and factual; delete outdated ones.
+- Give your moderators trusted roles so their answers keep training the bot.

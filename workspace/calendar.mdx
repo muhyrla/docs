@@ -1,0 +1,29 @@
+---
+title: "Calendar"
+description: "Relayn reads your announcements and builds an event calendar"
+icon: "calendar"
+---
+
+Communities announce events in channels — AMAs, game nights, releases, stream schedules — and members constantly ask "when is X?". The Calendar answers that automatically.
+
+## How it works
+
+1. On the **Calendar** page, add your announcement channels (e.g. `#announcements`, `#events`).
+2. Relayn scans posts in those channels and extracts events it finds: title, date, time, and a link to the original post.
+3. Extracted events appear on the calendar in the dashboard; past events are automatically marked as outdated.
+
+New posts in registered channels are picked up as they happen — you don't need to re-scan anything.
+
+## The bot knows your schedule
+
+Extracted events become part of what the bot can answer about. When a member asks "when's the next community call?" in a monitored channel, the bot answers from the calendar and links to the announcement.
+
+## Managing events
+
+- Open any event to see its details and the source post.
+- If the extraction got something wrong, you can edit or remove the event.
+- Removing a channel from the calendar stops future scanning; already-extracted events stay until you delete them.
+
+<Tip>
+Write announcements with an explicit date ("Friday, July 10, 18:00 UTC" rather than "next Friday") — clearer posts extract into cleaner calendar entries, and members get better answers.
+</Tip>

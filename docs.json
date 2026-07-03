@@ -1,34 +1,60 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Relayn",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#0055FF",
+    "light": "#4f7bff",
+    "dark": "#0044DD"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
-      {
-        "group": "About",
-        "pages": [
-          "about/overview"
-        ]
-      },
+    "groups": [
       {
         "group": "Getting Started",
         "pages": [
           "index",
           "quickstart"
         ]
-      }
-    ],
-    "groups": [
+      },
       {
-        "group": "About",
+        "group": "Knowledge Base",
         "pages": [
-          "about/overview"
+          "knowledge/overview",
+          "knowledge/files",
+          "knowledge/websites",
+          "knowledge/auto-learning"
+        ]
+      },
+      {
+        "group": "Bot",
+        "pages": [
+          "bot/how-answers-work",
+          "bot/settings",
+          "bot/replies"
+        ]
+      },
+      {
+        "group": "Workspace",
+        "pages": [
+          "workspace/team",
+          "workspace/calendar",
+          "workspace/analytics"
+        ]
+      },
+      {
+        "group": "Billing",
+        "pages": [
+          "billing/plans",
+          "billing/credits",
+          "billing/promo-codes"
+        ]
+      },
+      {
+        "group": "Account",
+        "pages": [
+          "account/settings",
+          "faq"
         ]
       }
     ]
@@ -40,14 +66,14 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "relayn.io",
+        "href": "https://relayn.io"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "href": "https://app.relayn.io"
     }
   },
   "contextual": {
@@ -55,18 +81,7 @@
       "copy",
       "view",
       "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "claude"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }
