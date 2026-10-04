@@ -7,13 +7,14 @@ icon: "message-bot"
 
 ## Question detection
 
-The bot watches only the channels you selected in [Bot settings](/bot/settings). In those channels it detects questions automatically — members don't need to mention or ping it, they just ask naturally.
+The bot watches only the channels you selected in [Bot settings](/bot/settings) — Discord channels, a Telegram group, or the [topics](/telegram#choose-where-the-bot-answers) you picked in it. There it detects questions automatically — members don't need to mention or ping it, they just ask naturally. It replies in the member's language.
 
 A few things it handles for you:
 
 - **Split messages** — if someone spreads a question across several quick messages, the bot waits for the burst to finish and treats it as one question.
 - **Follow-ups** — replies like "and how do I do that on mobile?" are understood in the context of the message they respond to.
 - **Not-questions** — chatter, reactions, and media-only messages are ignored.
+- **Your team talking** — messages from trusted members and Telegram experts aren't answered; the bot learns from them instead.
 
 ## Answering
 

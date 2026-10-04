@@ -13,7 +13,7 @@ Your best knowledge often isn't written down anywhere — it's in your moderator
     A member asks something your knowledge base doesn't cover. Instead of guessing, the bot stays quiet and marks the question as **waiting for an answer**.
   </Step>
   <Step title="A trusted member replies">
-    Someone with a [trusted role](/bot/settings#trusted-roles-and-users) answers the question in Discord — either as a direct reply or just by answering in the channel shortly after. Multi-message answers are stitched together automatically.
+    Someone you trust answers the question — a member with a [trusted role](/bot/settings#trusted-roles-and-users) in Discord, or an [expert](/telegram#experts-who-the-bot-learns-from) in Telegram. It can be a direct reply or just an answer in the channel shortly after. Multi-message answers are stitched together automatically.
   </Step>
   <Step title="Relayn learns the pair">
     The question and answer are saved as a learned Q&A pair (**3 credits**) and indexed into the knowledge base. Next time someone asks the same thing, the bot answers it itself.
@@ -26,13 +26,22 @@ Learned answers come from your own experts, so the bot treats them as high-autho
 
 The **Auto-learning** page in the dashboard shows every captured question:
 
-- **Waiting for answer** — questions the bot couldn't handle, with links to the original Discord messages. This is your live list of knowledge gaps.
-- **Learned pairs** — question, answer, who answered, and links to both messages in Discord.
+- **Waiting for answer** — questions the bot couldn't handle, with links to the original messages in Discord or Telegram. This is your live list of knowledge gaps.
+- **Learned pairs** — question, answer, who answered, and links to both messages.
 
 If several members ask the same thing, the duplicates are merged into one entry so the list stays clean.
 
-You can also answer a waiting question right from the dashboard — the answer is indexed the same way as one given in Discord.
+You can also answer a waiting question right from the dashboard — the answer is indexed the same way as one given in chat.
+
+## Importing past answers
+
+Your moderators have probably answered most common questions already. The history import on the **Auto-learning** page turns those past answers into learned pairs:
+
+- **Discord** — pick the channels and a start date; Relayn scans the history directly.
+- **Telegram** — bots can't read a group's history, so you upload a chat export from Telegram Desktop. See [Import your group's history](/telegram#import-your-groups-history).
+
+Only answers from trusted members or experts are imported. Each learned pair costs 3 credits. The import reaches back 1 month on Free and 6 months on Pro and Team.
 
 ## Who can teach the bot
 
-Only members you've marked as trusted — via **trusted roles** or individually as **trusted users** in [Bot settings](/bot/settings). Answers from everyone else are ignored, so a random member can't feed the bot wrong information.
+Only people you've marked as trusted: **trusted roles** or **trusted users** in Discord [Bot settings](/bot/settings), and **experts** in Telegram. Answers from everyone else are ignored, so a random member can't feed the bot wrong information.

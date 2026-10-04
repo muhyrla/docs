@@ -14,9 +14,20 @@ Communities announce events in channels — AMAs, game nights, releases, stream 
 
 New posts in registered channels are picked up as they happen — you don't need to re-scan anything.
 
+### Telegram channels
+
+Telegram announcement channels are added by link on the Calendar's **Telegram** tab:
+
+1. Make the Relayn bot an administrator of the channel — Telegram only delivers a channel's posts to its admins.
+2. Paste the channel's public link, like `https://t.me/yourchannel`. Invite links don't work.
+
+Only posts published after the bot was added arrive automatically. To include older posts, upload the channel's export from Telegram Desktop (`result.json`); the last 21 days are indexed.
+
 ## The bot knows your schedule
 
-Extracted events become part of what the bot can answer about. When a member asks "when's the next community call?" in a monitored channel, the bot answers from the calendar and links to the announcement.
+Extracted events become part of what the bot can answer about. When a member asks "when's the next community call?" in a monitored channel, the bot answers from the calendar and links to the announcement — in Discord and Telegram alike.
+
+On Pro and Team, the announcements themselves also become bot knowledge for 21 days, so the bot can answer questions about your latest news, not just event dates.
 
 ## Managing events
 
