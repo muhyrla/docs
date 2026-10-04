@@ -1,0 +1,100 @@
+---
+title: "Connecting Telegram"
+sidebarTitle: "Telegram"
+description: "Answer questions in your Telegram group and its forum topics"
+icon: "telegram"
+keywords:
+  - "telegram"
+  - "telegram group"
+  - "telegram bot"
+  - "forum topics"
+  - "/connect"
+  - "/expert"
+---
+
+Relayn works in Telegram groups the same way it works in Discord: it watches the conversation, answers members' questions from your knowledge base, and learns from your admins. Telegram is a second platform on the same workspace, so both share one knowledge base, one credit balance, and one dashboard.
+
+<Note>
+  A workspace can have one Discord server and one Telegram group. You can start with either one — onboarding asks which platform to connect first.
+</Note>
+
+## Connect a group
+
+<Steps>
+  <Step title="Get a code">
+    In the dashboard, open **Bot settings** → **Telegram** and click **Connect Telegram**. You get a one-time code like `ABCD-2345`. It works for 15 minutes; requesting a new code cancels the old one.
+  </Step>
+  <Step title="Add the bot to your group">
+    Add [@relayncm_bot](https://t.me/relayncm_bot) to your group and make it an **administrator**, so it can read every message.
+  </Step>
+  <Step title="Send /connect">
+    In the group, a group administrator sends `/connect` followed by the code, for example `/connect ABCD-2345`. The dashboard confirms the connection within a few seconds.
+  </Step>
+</Steps>
+
+Only a group administrator can connect a group, so a code leaked in a screenshot can't be used by a regular member. After a few wrong codes the group is blocked from trying again until the code expires.
+
+Once connected, the **Telegram** card in Bot settings shows the group name and whether Relayn can read every message. If the bot was removed from the group, the card tells you to add it back.
+
+## Choose where the bot answers
+
+- **Group without topics** — the whole group is one channel. The bot answers anywhere in it.
+- **Group with topics** (a forum) — each topic is a channel. Pick the topics the bot should watch, for example **Support** and **General**, and it answers inside the topic where the question was asked. Off-topic stays untouched.
+
+Telegram doesn't let bots list topics, so a topic appears in the dashboard after someone has written in it. On the Free plan the bot can watch up to 3 topics; Pro and Team have no limit. See [Plans](/billing/plans).
+
+The **Bot is active** switch on the Telegram card pauses the bot in the group without disconnecting it.
+
+## Experts: who the bot learns from
+
+Experts are the Telegram version of trusted members in [auto-learning](/knowledge/auto-learning).
+
+- **Group administrators are experts automatically.** Relayn fetches the admin list when you connect and refreshes it every few minutes.
+- **Add anyone else:** a group administrator replies `/expert` to one of their messages. Reply `/unexpert` to take them off the list.
+- **Remove an administrator** from the expert list on the Telegram card. A refresh won't add them back.
+
+Relayn learns from experts' answers and doesn't answer their messages, so it never interrupts your team.
+
+<Tip>
+  The `/connect`, `/expert`, and `/unexpert` commands are only shown to group administrators.
+</Tip>
+
+## Import your group's history
+
+Telegram doesn't let bots read past messages, so Relayn starts with your history through a chat export:
+
+1. Open the group in **Telegram Desktop**.
+2. Click **⋮** in the top right → **Export chat history**.
+3. Untick photos, videos and files, and pick the format **Machine-readable JSON**.
+4. In the dashboard, upload the `result.json` file in the history import card.
+
+Relayn finds the experts' answers to members' questions in the export and turns them into learned Q&A pairs, so the bot is useful from day one. Each learned pair costs [3 credits](/billing/credits). How far back the import goes depends on your plan: 1 month on Free, 6 months on Pro and Team.
+
+## Announcement channels
+
+Add your Telegram announcement channel to the [Calendar](/workspace/calendar) so the bot knows your events and news:
+
+1. Make the Relayn bot an **administrator** of the channel. Telegram only delivers a channel's posts to its admins.
+2. On the **Calendar** page, paste the channel's public link, like `https://t.me/yourchannel`. Invite links (`t.me/+…`) don't work.
+
+New posts are picked up as they're published. To include older posts, upload the channel's export (`result.json`); the last 21 days are indexed.
+
+## What works in Telegram
+
+| Feature | Telegram |
+| --- | --- |
+| Answers from your knowledge base | ✓ |
+| Forum topics as channels | ✓ |
+| Auto-learning from experts | ✓ |
+| History import | ✓ (from a chat export) |
+| Calendar from announcement channels | ✓ |
+| Analytics and weekly report | ✓ |
+| Tickets | Discord only for now |
+
+The dashboard shows both platforms together. On **Overview**, **Replies**, and **Analytics**, use the **All / Discord / Telegram** switch to look at one platform.
+
+## Disconnecting
+
+On the Telegram card, click **Disconnect** to unlink the group. The bot stops answering there; your knowledge base, learned answers, and settings stay in the workspace. To connect again, request a new code.
+
+If a regular group is upgraded to a supergroup, Telegram gives it a new ID. Relayn follows the change automatically — you don't need to reconnect.
