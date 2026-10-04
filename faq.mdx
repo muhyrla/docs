@@ -11,7 +11,7 @@ icon: "circle-question"
 In order of likelihood:
 
 1. **Is the bot enabled?** Check the master switch in [Bot settings](/bot/settings).
-2. **Is the channel selected?** The bot only answers in channels you've picked in Bot settings.
+2. **Is the channel selected?** The bot only answers in channels (or Telegram topics) you've picked in Bot settings.
 3. **Do you have credits?** At zero balance the bot pauses — see the [Billing](/billing/credits) page.
 4. **Is your knowledge Ready?** Sources still in Pending/Processing/Error aren't used in answers.
 5. **Does your knowledge actually cover the question?** If not, the bot deliberately stays silent instead of guessing — see [How the bot answers](/bot/how-answers-work).
@@ -34,15 +34,34 @@ No — the bot detects questions in monitored channels automatically. Members ju
 </Accordion>
 
 <Accordion title="How do I get more credits?">
-Credits refill each billing cycle from your plan's allowance. To get more: claim the one-time [Pro trial](/billing/promo-codes), redeem a promo code, or move to a higher plan.
+Credits refill each billing cycle from your plan's allowance. To get more: claim the one-time [Pro trial](/billing/promo-codes), redeem a promo code, or buy a higher [plan](/billing/plans) on the **Billing** page.
 </Accordion>
 
 <Accordion title="Can I connect several Discord servers?">
 Yes. Each server becomes its own workspace with an isolated knowledge base, team, plan, and credit balance. Switch between them in the dashboard sidebar.
 </Accordion>
 
+<Accordion title="Does Relayn work in Telegram?">
+Yes. Connect a Telegram group with a one-time code and `/connect` — see [Connecting Telegram](/telegram). A workspace can have one Discord server and one Telegram group; they share the knowledge base, learned answers, and credits.
+</Accordion>
+
+<Accordion title="The bot doesn't answer in my Telegram group">
+  1. **Is the bot still in the group and an administrator?** The Telegram card in Bot settings shows whether Relayn can read every message.
+  2. **Does the group use topics?** Then the bot only answers in the topics you selected. A new topic appears in the dashboard after someone writes in it.
+  3. **Is the person asking an expert?** The bot doesn't answer group administrators or experts — it learns from them instead.
+  4. **Is the bot paused?** Check the **Bot is active** switch on the Telegram card.
+</Accordion>
+
+<Accordion title="/connect says the code is wrong or expired">
+  Codes work for 15 minutes and only once, and requesting a new code cancels the previous one. Get a fresh code in Bot settings and make sure a group administrator sends it.
+</Accordion>
+
+<Accordion title="Do Tickets work in Telegram?">
+  Not yet. Telegram has no ticket channels, so Tickets work with Discord servers only for now. Everything else — answers, auto-learning, the calendar, analytics — works on both platforms.
+</Accordion>
+
 <Accordion title="Who can teach the bot new answers?">
-Only members you've marked as trusted (by role or individually) in [Bot settings](/bot/settings). Answers from anyone else are never learned.
+  In Discord, only members you've marked as trusted (by role or individually) in [Bot settings](/bot/settings). In Telegram, group administrators and the [experts](/telegram#experts-who-the-bot-learns-from) you added. Answers from anyone else are never learned.
 </Accordion>
 
 <Accordion title="I removed a knowledge source — will the bot still use it?">

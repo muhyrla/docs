@@ -22,7 +22,7 @@ Relayn works in Telegram groups the same way it works in Discord: it watches the
 
 <Steps>
   <Step title="Get a code">
-    In the dashboard, open **Bot settings** → **Telegram** and click **Connect Telegram**. You get a one-time code like `ABCD-2345`. It works for 15 minutes; requesting a new code cancels the old one.
+    In the dashboard, open **Bot settings** → **Telegram** and click **Get a code**. You get a one-time code like `ABCD-2345`. It works for 15 minutes; requesting a new code cancels the old one.
   </Step>
   <Step title="Add the bot to your group">
     Add [@relayncm_bot](https://t.me/relayncm_bot) to your group and make it an **administrator**, so it can read every message.
@@ -66,7 +66,7 @@ Telegram doesn't let bots read past messages, so Relayn starts with your history
 1. Open the group in **Telegram Desktop**.
 2. Click **⋮** in the top right → **Export chat history**.
 3. Untick photos, videos and files, and pick the format **Machine-readable JSON**.
-4. In the dashboard, upload the `result.json` file in the history import card.
+4. In the dashboard, open **Auto-learning**, start the history import, switch to the **Telegram** tab, and upload the `result.json` file.
 
 Relayn finds the experts' answers to members' questions in the export and turns them into learned Q&A pairs, so the bot is useful from day one. Each learned pair costs [3 credits](/billing/credits). How far back the import goes depends on your plan: 1 month on Free, 6 months on Pro and Team.
 
@@ -95,6 +95,6 @@ The dashboard shows both platforms together. On **Overview**, **Replies**, and *
 
 ## Disconnecting
 
-On the Telegram card, click **Disconnect** to unlink the group. The bot stops answering there; your knowledge base, learned answers, and settings stay in the workspace. To connect again, request a new code.
+On the Telegram card, click **Disconnect group** to unlink it. The bot stops answering there; your knowledge base, learned answers, and settings stay in the workspace. To connect again, request a new code.
 
 If a regular group is upgraded to a supergroup, Telegram gives it a new ID. Relayn follows the change automatically — you don't need to reconnect.
